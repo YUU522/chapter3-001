@@ -1,8 +1,15 @@
-<h2>タイトル</h2>
-<p><%= @book.title %></p>
 
-<h2>本文</h2>
-<p><%= @book.body %></p>
-
-<%= link_to "edit",edit_book_path(@book.id)%>
+<table>
+      <td><b>Title:</b></td>    
+      <td><%=@book.title %></td>
+    </tr>
+    <tr>
+      <td><b>Body:</b></td>
+      <td><%= @book.body %></td>
+    </tr>
+</table>
+<div class="show_tab">
+<%= link_to "Edit",edit_book_path(@book.id)%>
+<a>|</a>
 <a href="/books">Back</a>
+</div>
